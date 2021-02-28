@@ -42,12 +42,12 @@ const questions = [
   },
 ];
 
-// Function to write README file using the user input
+//writes README file using user inputs
 function writeToFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-// Function to initialize app
+// initialize app
 function init() {
   inquirer.prompt(questions).then((inquirerResponses) => {
     console.log('Generating README...');
